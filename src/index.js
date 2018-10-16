@@ -11,17 +11,25 @@ const API_KEY = 'AIzaSyCEy-JmrOHX9ppIcfKILphf5dalEePM5Js';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = { videos: [] };
+        this.state = {
+            videos: [],
+            selectedVideo: null,
+        };
         youtubeSearch({key: API_KEY, term: 'usc'}, (videos) => {
-            this.setState({ videos }); // videos : videos
+            this.setState({
+                videos: videos,
+                selectedVideo: videos[0],
+            });
         });
     }
     render() {
         return (
             <div>
                 <SearchBar/>
-                <VideoDetail video={this.state.videos[0]}/>
-                <VideoList videos={this.state.videos} />
+                <VideoDetail video={this.state.selectedVideo}/>
+                <VideoList
+                    onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+                    videos={this.state.videos} />
             </div>
         );
     }
