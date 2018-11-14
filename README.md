@@ -15,5 +15,6 @@ npm start
 ```
 * Open the client at http://localhost:3000/
 * The web app will show up, you can search by typing in keywords in the search bar, and you can choose videos from the side video list.
+![youtube pic](./youtube.png)
 ## Built with
 * [React](https://reactjs.org/)
