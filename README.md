@@ -14,7 +14,7 @@ cd Youtube-Web-App
 npm start
 ```
 * Open the client at http://localhost:3000/
-* The web app will show up, you can search by typing in keywords in the search bar, and you can choose videos from the side video list.
+* The web app will show up, you can search by typing in keywords in the search bar, the search bar will automatically detect the keywords you type in every 3 seconds, and you can choose videos from the side video list.
 
 ![youtube pic](./youtube.png)
 ## Built with
